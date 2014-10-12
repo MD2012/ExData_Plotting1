@@ -1,4 +1,9 @@
 plot1 <- function() {
+  #cleanup and config
+  rm(list = ls())
+  graphics.off() 
+  par(ps=10)
+  
   #read
   unzip("exdata-data-household_power_consumption.zip")
   csvFile <- "household_power_consumption.txt"

@@ -1,11 +1,12 @@
 plot4 <- function() {
-  #general config
+  #cleanup and config
   rm(list = ls())
   graphics.off() 
   par(mfcol=c(2, 2), ps=10)
   Sys.setlocale(category="LC_TIME", "en_US.UTF-8")
   
   #read
+  unzip("exdata-data-household_power_consumption.zip")
   csvFile <- "household_power_consumption.txt"
   data <- read.csv(csvFile, sep=";", header=TRUE, na.strings="?")
   
